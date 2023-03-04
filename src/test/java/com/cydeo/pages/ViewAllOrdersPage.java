@@ -1,19 +1,17 @@
-package com.cydeo.step_definitions;
+package com.cydeo.pages;
 
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class DropdownsPage {
+public class ViewAllOrdersPage extends BasePage {
 
-    public DropdownsPage(){
+    public ViewAllOrdersPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(id="month")
-    public WebElement monthDropdown;
-
-
+    @FindBy(xpath = "//table[@class='table is-fullwidth']/tbody/tr[1]/td[1]")
+    public WebElement newCustomerCell;
 
 }
